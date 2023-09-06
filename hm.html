@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Hypermodal Explorer</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="hm.css">
+    <script>
+        window.onload = function () {
+            document.querySelector(".centerloader").style.display = "none";
+        }
+    </script>
+    <script src="rsc/libraries/p5.js"></script>
+    <!-- <script src="rsc/libraries/plotly.js"></script>
+    <script src="rsc/libraries/d3.min.js"></script> -->
+    <meta name="description" content="Hypermodal Explorer">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+    <div class="centerloader">
+        <div class="loader">
+            <div class="un"></div>
+            <div class="deux"></div>
+            <div class="trois"></div>
+            <div class="quatre"></div>
+            <div class="cinq"></div>
+        </div>
+        <div id="loading_text">LOADING ENVIRONMENT</div>
+    </div>
+    <div id="control_panel">
+        <div id="controls">
+            <input id="search" placeholder="" style="display: None;">
+        </div>
+        <div id="viewer"></div>
+        <div id="info">
+            <div id="id"></div>
+            <attr title="additional info">
+                <img id="info_icn" src="rsc/img/info_icn.svg"></img>
+            </attr>
+            <attr title="mute/unmute">
+                <img id="mute_button" class="muted" src="rsc/img/muted.svg" alt="mute_btn">
+            </attr>
+        </div>
+        <div id="stats" class="hidden">
+            <div class="sq_container">
+                <div id="rsq"></div>
+                <abbr id="r_rarity_desc" title="">
+                    <div class="descriptor" id="r_rarity">r: x (0.0%)</div>
+                </abbr>
+            </div>
+            <div class="sq_container">
+                <div id="gsq"></div>
+                <abbr id="g_rarity_desc" title="">
+                    <div class="descriptor" id="g_rarity">r: x (0.0%)</div>
+                </abbr>
+            </div>
+            <div class="sq_container">
+                <div id="bsq"></div>
+                <abbr id="b_rarity_desc" title="">
+                    <div class="descriptor" id="b_rarity">r: x (0.0%)</div>
+                </abbr>
+            </div>
+            <abbr id="rp_rarity_desc" title="">
+                <div class="descriptor" id="rp_rarity">rp: x (0.0%)</div>
+            </abbr>
+            <abbr id="gp_rarity_desc" title="">
+                <div class="descriptor" id="gp_rarity">gp: x (0.0%)</div>
+            </abbr>
+            <abbr id="bp_rarity_desc" title="">
+                <div class="descriptor" id="bp_rarity">bp: x (0.0%)</div>
+            </abbr>
+            <abbr id="sym_rarity_desc" title="">
+                <div class="descriptor" id="sym_rarity">sym: x (0.0%)</div>
+            </abbr>
+            <abbr id="std_desc" title="The standard deviation score [(dist - mean)/std_dev].">
+                <div class="descriptor" id="std">std: x</div>
+            </abbr>
+            <abbr id="tot_desc" title="The total rarity score [sum(1/category_rarity)].">
+                <div class="descriptor" id="tot">scr: x</div>
+            </abbr>
+        </div>
+    </div>
+
+</body>
+
+<script src="rsc/tools/Tools.js"></script>
+<script src="rsc/tools/Osc.js"></script>
+<script src="rsc/tools/Grid.js"></script>
+<script src="rsc/tools/Nodal.js"></script>
+<!-- <script src="rsc/tools/Universe.js"></script> -->
+<script src="rsc/tools/Hypermodal.js"></script>
+
+</html>
